@@ -1,5 +1,5 @@
-﻿using cAlgo.API.Extensions.Enums;
-using cAlgo.API.Extensions.Models;
+﻿using cAlgo.API.Extensions.Series.Enums;
+using cAlgo.API.Extensions.Series.Models;
 using cAlgo.API.Extensions.Series.Helpers;
 using cAlgo.API.Internals;
 using System;
@@ -72,7 +72,7 @@ namespace cAlgo.API.Extensions.Series
 
                 Insert(bar);
 
-                OnBar?.Invoke(this, bar, this.GetBar(Index - 1));
+                OnBar.Invoke(this, bar, this.GetBar(Index - 1));
             }
 
             Insert(Index, TickVolumes.LastValue + 1, SeriesType.TickVolume);

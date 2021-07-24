@@ -1,4 +1,4 @@
-﻿namespace cAlgo.API.Extensions.Enums
+﻿namespace cAlgo.API.Extensions.Series.Enums
 {
     public enum SeriesType
     {

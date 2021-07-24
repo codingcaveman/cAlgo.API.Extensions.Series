@@ -10,10 +10,10 @@ namespace cAlgo.API.Extensions.Series
 
         public double this[int index]
         {
-            get => _data.ContainsKey(index) ? _data[index] : double.NaN;
+            get { return _data.ContainsKey(index) ? _data[index] : double.NaN; }
             set
             {
-                if (_data.ContainsKey(index))
+                if ( _data.ContainsKey(index) )
                 {
                     _data[index] = value;
                 }
@@ -24,11 +24,11 @@ namespace cAlgo.API.Extensions.Series
             }
         }
 
-        public double LastValue => _data.Keys.Any() ? _data[_data.Keys.Max()] : double.NaN;
+        public double LastValue { get { return _data.Keys.Any() ? _data[_data.Keys.Max()] : double.NaN; } }
 
-        public int Count => _data.Count;
+        public int Count { get { return _data.Count; } }
 
-        public IEnumerator<double> GetEnumerator() => _data.Values.GetEnumerator();
+    public IEnumerator<double> GetEnumerator() { return _data.Values.GetEnumerator(); }
 
         public double Last(int lastIndex)
         {
@@ -37,6 +37,6 @@ namespace cAlgo.API.Extensions.Series
             return this[index];
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
     }
 }

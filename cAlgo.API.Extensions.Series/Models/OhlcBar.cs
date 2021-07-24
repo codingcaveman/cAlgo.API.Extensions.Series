@@ -1,7 +1,7 @@
-﻿using cAlgo.API.Extensions.Enums;
+﻿using cAlgo.API.Extensions.Series.Enums;
 using System;
 
-namespace cAlgo.API.Extensions.Models
+namespace cAlgo.API.Extensions.Series.Models
 {
     public class OhlcBar
     {

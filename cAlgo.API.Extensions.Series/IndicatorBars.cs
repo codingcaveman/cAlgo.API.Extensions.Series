@@ -1,5 +1,5 @@
-﻿using cAlgo.API.Extensions.Enums;
-using cAlgo.API.Extensions.Models;
+﻿using cAlgo.API.Extensions.Series.Enums;
+using cAlgo.API.Extensions.Series.Models;
 using cAlgo.API.Extensions.Series.Helpers;
 using cAlgo.API.Indicators;
 using cAlgo.API.Internals;
@@ -210,11 +210,11 @@ namespace cAlgo.API.Extensions.Series
             }
         }
 
-        public Bar LastBar => _bars[_bars.Keys.Max()];
+        public Bar LastBar { get { return _bars[_bars.Keys.Max()]; } }
 
-        public int Count => ClosePrices.Count;
+        public int Count { get { return ClosePrices.Count; } }
 
-        public Bar this[int index] => _bars[index];
+        public Bar this[int index] { get { return _bars[index]; } }
 
         #endregion Properties
 
@@ -307,7 +307,7 @@ namespace cAlgo.API.Extensions.Series
             return ma.Result[index];
         }
 
-        public Bar Last(int index) => _bars[_bars.Keys.Max() - index];
+        public Bar Last( int index ) { return _bars[_bars.Keys.Max() - index]; }
 
         public int LoadMoreHistory()
         {
@@ -324,9 +324,9 @@ namespace cAlgo.API.Extensions.Series
             throw new NotImplementedException();
         }
 
-        public IEnumerator<Bar> GetEnumerator() => _bars.Values.GetEnumerator();
+        public IEnumerator<Bar> GetEnumerator() { return _bars.Values.GetEnumerator(); }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 
         #endregion Methods
     }

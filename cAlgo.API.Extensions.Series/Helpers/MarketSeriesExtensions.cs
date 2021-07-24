@@ -1,5 +1,5 @@
-﻿using cAlgo.API.Extensions.Enums;
-using cAlgo.API.Extensions.Models;
+﻿using cAlgo.API.Extensions.Series.Enums;
+using cAlgo.API.Extensions.Series.Models;
 using cAlgo.API.Internals;
 using System;
 

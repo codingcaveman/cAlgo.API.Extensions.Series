@@ -1,4 +1,4 @@
-﻿using cAlgo.API.Extensions.Models;
+﻿using cAlgo.API.Extensions.Series.Models;
 using cAlgo.API.Extensions.Series.Helpers;
 using cAlgo.API.Internals;
 using System;
@@ -34,15 +34,15 @@ namespace cAlgo.API.Extensions.Series
 
         #region Properties
 
-        public int BarStartIndex => _barStartIndex;
+        public int BarStartIndex { get { return _barStartIndex; } }
 
-        public int BarEndIndex => _barEndIndex;
+        public int BarEndIndex { get { return _barEndIndex; } }
 
-        public DateTime BarStartTime => _barStartTime;
+        public DateTime BarStartTime { get { return _barStartTime; } }
 
-        public DateTime BarEndTime => _barEndTime;
+        public DateTime BarEndTime { get { return _barEndTime; } }
 
-        public new OhlcBar LastBar => _lastBar;
+        public new OhlcBar LastBar { get { return _lastBar; } }
 
         public Action<string> Print { get; set; }
 
